@@ -90,31 +90,31 @@ const About = ({isHome}) => {
                 <div className='w-full px-0 md:px-10 lg:px-20'>
                 <p className='text-white text-5xl font-semibold mb-10 pt-20 text-center lg:text-left'>What We Do ?</p>
                 <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 px-4 md:px-0">
-                    <div className='relative rounded-xl overflow-hidden border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] py-8 px-12 flex flex-col justify-between text-white text-xl text-center'>
+                    <div className='relative rounded-xl overflow-hidden border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] py-8 px-4 md:px-12 flex flex-col justify-between text-white text-lg md:text-xl text-center'>
                         <div className='w-16 h-16 mb-6 mx-auto flex justify-center items-center rounded-xl border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] bg-[#4A35A1]'>
                             <MdOutlinePowerSettingsNew className='text-3xl text-white' />
                         </div>
                         <p>Host workshops and hackathons on AI and astronautics</p>
                     </div>
-                    <div className='relative rounded-xl overflow-hidden border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] py-8 px-12 flex flex-col justify-between text-white text-xl text-center'>
+                    <div className='relative rounded-xl overflow-hidden border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] py-8 px-4 md:px-12 flex flex-col justify-between text-white text-lg md:text-xl  text-center'>
                         <div className='w-16 h-16 mb-6 mx-auto flex justify-center items-center rounded-xl border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] bg-[#4A35A1]'>
                             <RiUserAddFill className='text-3xl text-white' />
                         </div>
                         <p>Collaborate with space industry leaders for mentorship</p>
                     </div>
-                    <div className='relative rounded-xl overflow-hidden border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] py-8 px-12 flex flex-col justify-between text-white text-xl text-center'>
+                    <div className='relative rounded-xl overflow-hidden border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] py-8 px-4 md:px-12 flex flex-col justify-between text-white text-lg md:text-xl  text-center'>
                         <div className='w-16 h-16 mb-6 mx-auto flex justify-center items-center rounded-xl border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] bg-[#4A35A1]'>
                             <IoPlanet className='text-3xl text-white' />
                         </div>
                         <p>Develop AI-driven tools for astronaut missions</p>
                     </div>
-                    <div className='relative rounded-xl overflow-hidden border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] py-8 px-12 flex flex-col justify-between text-white text-xl text-center'>
+                    <div className='relative rounded-xl overflow-hidden border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] py-8 px-4 md:px-12 flex flex-col justify-between text-white text-lg md:text-xl  text-center'>
                         <div className='w-16 h-16 mb-6 mx-auto flex justify-center items-center rounded-xl border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] bg-[#4A35A1]'>
                             <MdOutlineWoman className='text-3xl text-white' />
                         </div>
                         <p>Build a supportive network for women in tech</p>
                     </div>
-                    <div className='relative rounded-xl overflow-hidden border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] py-8 px-12 flex flex-col justify-between text-white text-xl text-center'>
+                    <div className='relative rounded-xl overflow-hidden border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] py-8 px-4 md:px-12 flex flex-col justify-between text-white text-lg md:text-xl  text-center'>
                         <div className='w-16 h-16 mb-6 mx-auto flex justify-center items-center rounded-xl border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] bg-[#4A35A1]'>
                             <GrResources className='text-3xl text-white' />
                         </div>

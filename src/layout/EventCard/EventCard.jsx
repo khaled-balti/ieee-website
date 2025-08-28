@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { formatDate } from '../../helper/formatDate';
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
@@ -7,6 +7,14 @@ import Modal from '../Modal/Modal';
 import { AdvancedImage, AdvancedVideo } from '@cloudinary/react';
 const EventCard = ({event}) => {
     const [isOpen, setIsOpen] = useState(false)
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+    useEffect(() => {
+      const checkScreen = () => setIsSmallScreen(window.innerWidth < 768); // Tailwind md = 768px
+      checkScreen();
+      window.addEventListener("resize", checkScreen);
+      return () => window.removeEventListener("resize", checkScreen);
+    }, []);
   return (
     <div className="relative rounded-xl overflow-hidden border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] flex">
         <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
@@ -18,7 +26,7 @@ const EventCard = ({event}) => {
                 {event?.gallery.map((media) => (
                     <div key={media?.id} className="rounded-xl overflow-hidden">
                     {media?.type === "image" ? (
-                        <a href={media?.media?.toURL()} target="_blank" rel="noopener noreferrer">
+                        <a href={media?.media?.toURL()} target={isSmallScreen ? "_self" : "_blank"} rel="noopener noreferrer">
                         <AdvancedImage
                             cldImg={media?.media}
                             className={`rounded-xl w-full object-cover ${
@@ -80,16 +88,16 @@ const EventCard = ({event}) => {
             </div>
         <p className='text-white text-3xl font-semibold mb-4'>{event?.title}</p>
         {event?.description && <p className='text-white text-md mb-8 line-clamp-3'>{event?.description}</p>}
-        <div className='px-6'>
-            <div className='flex space-x-6'>
+        <div className='md:px-6'>
+            <div className='flex space-x-2 md:space-x-6'>
                 <FaRegCalendarAlt className='text-2xl text-white' />
                 {event?.date ? <p className='text-white text-lg'>{formatDate(event?.date[0])} {event?.date.length === 2 && '-'} {event?.date.length === 2 && formatDate(event?.date[1])}</p> : <p className='text-white text-lg'>coming soon ...</p>}
             </div>
-            <div className='flex space-x-6 mt-3'>
+            <div className='flex space-x-2 md:space-x-6 mt-3'>
                 <FaLocationDot className='text-2xl text-white ' />
                 <p className='text-white text-lg'>{event?.place ? event?.place : "unmentioned"}</p>
             </div>
-            {event?.participants && <div className='flex space-x-6 mt-3'>
+            {event?.participants && <div className='flex space-x-2 md:space-x-6 mt-3'>
                 <FiUsers className='text-2xl text-white ' />
                 <p className='text-white text-lg'>+{event?.participants} participants</p>
             </div>}

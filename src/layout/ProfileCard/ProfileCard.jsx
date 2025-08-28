@@ -52,7 +52,7 @@ const ProfileCard = ({ member }) => {
         <div className="text-xl text-white text-center">{member?.description}</div>
 
         {/* Push contacts to bottom */}
-        <div className="flex justify-between mt-auto pt-6 px-16">
+        <div className="flex justify-between mt-auto pt-6 px-8 md:px-16">
           <Link
             className="p-4 rounded-full text-white bg-[#4A35A1] shadow-[0_8px_40px_#4A35A1]"
             to={member?.facebook}
