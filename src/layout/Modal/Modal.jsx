@@ -13,7 +13,7 @@ const Modal = ({ isOpen, onClose, children }) => {
         >
           {/* Modal box */}
           <motion.div
-            className="overflow-y-auto rounded-2xl my-40 md:my-0 pt-8 pb-16 md:pb-8 px-4 md:px-16 mt-20 w-[80%] h-[800px] relative bg-[#333] shadow-[0_8px_40px_#333]"
+            className="overflow-y-auto rounded-2xl my-40 md:my-0 pt-16 md:pt-8 pb-16 md:pb-8 px-4 md:px-16 mt-20 w-[80%] h-[800px] relative bg-[#333] shadow-[0_8px_40px_#333]"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
