@@ -18,8 +18,8 @@ const EventCard = ({event}) => {
   return (
     <div className="relative rounded-xl overflow-hidden border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] flex">
         <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-            <h1 className="text-white font-semibold text-3xl md:text-4xl text-center">{event?.title}</h1>
-            <p className="text-white text-lg md:text-xl mt-10 text-center">{event?.description}</p>
+            <h1 className="text-white font-semibold text-2xl md:text-4xl text-center">{event?.title}</h1>
+            <p className="text-white text-md md:text-xl mt-10 text-center">{event?.description}</p>
 
             {event?.gallery.length > 0 && (
                 <div className="px-4 md:px-10 mt-10 flex flex-col gap-10">
