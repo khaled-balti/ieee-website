@@ -626,37 +626,37 @@ const Events = ({isHome}) => {
                 <img src={DarkBg} className="absolute inset-0 w-full h-full object-cover -z-10" alt="Background" />
                 <div className='px-4 md:px-20 lg:px-40 mb-10 flex space-x-2 md:justify-center w-full md:space-x-4 overflow-x-auto pb-4'>
                     <div
-                        className={`rounded-3xl text-white flex justify-center items-center px-4 py-3 text-xl font-semibold hover:bg-[#8359FC] transition-colors duration-300 ease-in-out cursor-pointer ${currentRoute === "all" ? 'bg-[#8359FC]' : 'bg-transparent'}`}
+                        className={`rounded-3xl text-white flex justify-center items-center px-4 py-3 text-md md:text-xl font-semibold hover:bg-[#8359FC] transition-colors duration-300 ease-in-out cursor-pointer ${currentRoute === "all" ? 'bg-[#8359FC]' : 'bg-transparent'}`}
                         onClick={(e) => swicthEvents(e, "all")}
                     >
                         All
                     </div>
                     <div
-                        className={`rounded-3xl text-white flex justify-center items-center px-4 py-3 text-xl font-semibold hover:bg-[#8359FC] cursor-pointer transition-colors duration-300 ease-in-out ${currentRoute === "celebrations" ? 'bg-[#8359FC]' : 'bg-transparent'}`}
+                        className={`rounded-3xl text-white flex justify-center items-center px-4 py-3 text-md md:text-xl font-semibold hover:bg-[#8359FC] cursor-pointer transition-colors duration-300 ease-in-out ${currentRoute === "celebrations" ? 'bg-[#8359FC]' : 'bg-transparent'}`}
                         onClick={(e) => swicthEvents(e, "celebrations")}
                     >
                         Celebrations
                     </div>
                     <div
-                        className={`rounded-3xl text-white flex justify-center items-center px-4 py-3 text-xl font-semibold hover:bg-[#8359FC] cursor-pointer transition-colors duration-300 ease-in-out ${currentRoute === "upcoming" ? 'bg-[#8359FC]' : 'bg-transparent'}`}
+                        className={`rounded-3xl text-white flex justify-center items-center px-4 py-3 text-md md:text-xl font-semibold hover:bg-[#8359FC] cursor-pointer transition-colors duration-300 ease-in-out ${currentRoute === "upcoming" ? 'bg-[#8359FC]' : 'bg-transparent'}`}
                         onClick={(e) => swicthEvents(e, "upcoming")}
                     >
                         Upcoming
                     </div>
                     <div
-                        className={`rounded-3xl text-white flex justify-center items-center px-4 py-3 text-xl font-semibold hover:bg-[#8359FC] cursor-pointer transition-colors duration-300 ease-in-out ${currentRoute === "past" ? 'bg-[#8359FC]' : 'bg-transparent'}`}
+                        className={`rounded-3xl text-white flex justify-center items-center px-4 py-3 text-md md:text-xl font-semibold hover:bg-[#8359FC] cursor-pointer transition-colors duration-300 ease-in-out ${currentRoute === "past" ? 'bg-[#8359FC]' : 'bg-transparent'}`}
                         onClick={(e) => swicthEvents(e, "past")}
                     >
                         Past
                     </div>
                     <div
-                        className={`rounded-3xl text-white flex justify-center items-center px-4 py-3 text-xl font-semibold hover:bg-[#8359FC] cursor-pointer transition-colors duration-300 ease-in-out ${currentRoute === "bootcamps" ? 'bg-[#8359FC]' : 'bg-transparent'}`}
+                        className={`rounded-3xl text-white flex justify-center items-center px-4 py-3 text-md md:text-xl font-semibold hover:bg-[#8359FC] cursor-pointer transition-colors duration-300 ease-in-out ${currentRoute === "bootcamps" ? 'bg-[#8359FC]' : 'bg-transparent'}`}
                         onClick={(e) => swicthEvents(e, "bootcamps")}
                     >
                         Bootcamps
                     </div>
                     <div
-                        className={`cursor-pointer rounded-3xl text-white flex justify-center items-center px-4 py-3 text-xl font-semibold hover:bg-[#8359FC] cursor-pointertransition-colors duration-300 ease-in-out  ${currentRoute === "sessions" ? 'bg-[#8359FC]' : 'bg-transparent'}`}
+                        className={`cursor-pointer rounded-3xl text-white flex justify-center items-center px-4 py-3 text-md md:text-xl font-semibold hover:bg-[#8359FC] cursor-pointertransition-colors duration-300 ease-in-out  ${currentRoute === "sessions" ? 'bg-[#8359FC]' : 'bg-transparent'}`}
                         onClick={(e) => swicthEvents(e, "sessions")}
                     >
                         Sessions

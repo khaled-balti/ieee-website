@@ -18,7 +18,7 @@ const EventCard = ({event}) => {
   return (
     <div className="relative rounded-xl overflow-hidden border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] flex">
         <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-            <h1 className="text-white font-semibold text-2xl md:text-4xl text-center">{event?.title}</h1>
+            <h1 className="text-white font-semibold text-xl md:text-4xl text-center">{event?.title}</h1>
             <p className="text-white text-md md:text-xl mt-10 text-center">{event?.description}</p>
 
             {event?.gallery.length > 0 && (
@@ -74,7 +74,7 @@ const EventCard = ({event}) => {
       </div>
 
       {/* Card Content */}
-      <div className=" relative px-8 py-6 flex flex-col w-2/3">
+      <div className=" relative px-4 md:px-8 py-2 md:py-6 flex flex-col w-2/3">
             {/* Background Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 -z-10">
                 <div
@@ -90,22 +90,22 @@ const EventCard = ({event}) => {
                 }}
                 ></div>
             </div>
-        <p className='text-white text-3xl font-semibold mb-4'>{event?.title}</p>
-        {event?.description && <p className='text-white text-md mb-8 line-clamp-3'>{event?.description}</p>}
+        <p className='text-white text-xl md:text-3xl font-semibold mb-4'>{event?.title}</p>
+        {event?.description && <p className='text-white text-md mb-2 md:mb-8 line-clamp-2 md:line-clamp-3'>{event?.description}</p>}
         <div className='md:px-6'>
             <div className='flex space-x-2 md:space-x-6'>
-                <FaRegCalendarAlt className='text-2xl text-white' />
-                {event?.date ? <p className='text-white text-lg'>{formatDate(event?.date[0])} {event?.date.length === 2 && '-'} {event?.date.length === 2 && formatDate(event?.date[1])}</p> : <p className='text-white text-lg'>coming soon ...</p>}
+                <FaRegCalendarAlt className='text-xl md:text-2xl text-white' />
+                {event?.date ? <p className='text-white text-md md:text-lg'>{formatDate(event?.date[0])} {event?.date.length === 2 && '-'} {event?.date.length === 2 && formatDate(event?.date[1])}</p> : <p className='text-white text-lg'>coming soon ...</p>}
             </div>
             <div className='flex space-x-2 md:space-x-6 mt-3'>
-                <FaLocationDot className='text-2xl text-white ' />
-                <p className='text-white text-lg'>{event?.place ? event?.place : "unmentioned"}</p>
+                <FaLocationDot className='text-xl md:text-2xl text-white ' />
+                <p className='text-white text-md md:text-lg'>{event?.place ? event?.place : "unmentioned"}</p>
             </div>
             {event?.participants && <div className='flex space-x-2 md:space-x-6 mt-3'>
-                <FiUsers className='text-2xl text-white ' />
-                <p className='text-white text-lg'>+{event?.participants} participants</p>
+                <FiUsers className='text-wl md:text-2xl text-white ' />
+                <p className='text-white ttext-md md:text-lg'>+{event?.participants} <span className='hidden md:inline'>participants</span></p>
             </div>}
-            {event?.date && new Date(event?.date[event?.date.length === 1 ? 0 : 1].split("/").reverse().join("-")) < new Date() && <button className="cursor-pointer rounded-3xl border border-[#7453FC] px-4 py-2 text-white text-md font-semibold bg-[#7453FC] mt-4" onClick={() => setIsOpen(true)} >
+            {event?.date && new Date(event?.date[event?.date.length === 1 ? 0 : 1].split("/").reverse().join("-")) < new Date() && <button className="cursor-pointer rounded-3xl border border-[#7453FC] px-4 py-2 text-white text-sm md:text-md font-semibold bg-[#7453FC] mt-2 md:mt-4" onClick={() => setIsOpen(true)} >
                 More Details
             </button>}
         </div>

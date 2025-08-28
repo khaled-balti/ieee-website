@@ -36,7 +36,7 @@ const Awards = ({isHome}) => {
             <div className="relative w-full pt-10 flex flex-col justify-center items-center pb-10">
                 <img src={DarkBg} className="absolute inset-0 w-full h-full object-cover -z-10" alt="Background" />
                 <div className=' px-4 lg:px-40'>
-                    {awards.map(award => <div key={award?.id} className='grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16 overflow-hidden'>
+                    {awards.map(award => <div key={award?.id} className='grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16 overflow-hidden px-4 md:px-0 xl:px-40'>
                         <div className="lg:h-[400px]">
                             <AdvancedImage
                             cldImg={award?.image}
@@ -46,7 +46,7 @@ const Awards = ({isHome}) => {
                         </div>
                         <div>
                             <p className='text-white text-4xl font-semibold mb-10'>{award?.title}</p>
-                            <p className='text-white text-lg xl:text-xl mb-10'>{award?.description}</p>
+                            <p className='text-white text-md xl:text-xl mb-10'>{award?.description}</p>
                              <div className='flex space-x-6'>
                                 <FaRegCalendarAlt className='text-2xl text-white' />
                                 <p className='text-white text-lg'>{formatDate(award?.date)}</p>

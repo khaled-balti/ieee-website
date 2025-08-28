@@ -22,7 +22,7 @@ const ProfileCard = ({ member }) => {
         <AdvancedImage
           cldImg={member?.image}
           alt="error"
-          className="object-cover w-full rounded-lg h-80"
+          className="object-cover w-full rounded-lg h-60 md:h-80"
         />
       </div>
 
@@ -44,11 +44,11 @@ const ProfileCard = ({ member }) => {
 
       {/* Card Content */}
       <div className="px-4 py-3 flex flex-col flex-grow">
-        <div className="text-white font-semibold text-3xl mb-4 text-center">{`${member?.firstName} ${member?.lastName}`}</div>
-        <div className="text-white font-semibold text-xl mb-4 text-center">
+        <div className="text-white font-semibold text-xl md:text-3xl mb-2 md:mb-4 text-center">{`${member?.firstName} ${member?.lastName}`}</div>
+        <div className="text-white font-semibold text-lg md:text-xl mb-2 md:mb-4 text-center">
           {member?.post}
         </div>
-        <hr className="border-0 h-[1px] bg-white opacity-50 my-4 mx-20" />
+        <hr className="border-0 h-[1px] bg-white opacity-50 my-2 md:my-4 mx-20" />
         <div className="text-xl text-white text-center">{member?.description}</div>
 
         {/* Push contacts to bottom */}
