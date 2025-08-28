@@ -10,7 +10,7 @@ const EventCard = ({event}) => {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
 
     useEffect(() => {
-      const checkScreen = () => setIsSmallScreen(window.innerWidth < 768); // Tailwind md = 768px
+      const checkScreen = () => setIsSmallScreen(window.innerWidth < 768);
       checkScreen();
       window.addEventListener("resize", checkScreen);
       return () => window.removeEventListener("resize", checkScreen);
@@ -51,7 +51,7 @@ const EventCard = ({event}) => {
 
                     )}
 
-                    {media?.description && <p className="text-white text-xl mt-4">{media?.description}</p>}
+                    {media?.description && <p className="text-white text-md md:text-xl mt-4">{media?.description}</p>}
                     </div>
                 ))}
                 </div>
