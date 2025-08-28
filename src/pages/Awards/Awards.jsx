@@ -7,7 +7,7 @@ import { FaRegCalendarAlt } from 'react-icons/fa';
 import { Cloudinary } from '@cloudinary/url-gen/index';
 import { AdvancedImage } from '@cloudinary/react';
 const Awards = ({isHome}) => {
-    const cld = new Cloudinary({ cloud: { cloudName: "dztd3ciau" } });
+    const cld = new Cloudinary({ cloud: { cloudName: import.meta.env.VITE_API_URL } });
     const AwardsImage = cld.image("awards_ckp4ry");
     const awards = [
         {
@@ -41,7 +41,7 @@ const Awards = ({isHome}) => {
                             <AdvancedImage
                             cldImg={award?.image}
                             alt="error"
-                            className="h-full w-full object-cover rounded-2xl"
+                            className="h-full w-full object-fit rounded-2xl"
                             />
                         </div>
                         <div>

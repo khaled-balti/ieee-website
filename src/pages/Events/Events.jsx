@@ -5,10 +5,9 @@ import { BiParty } from "react-icons/bi";
 import EventCard from '../../layout/EventCard/EventCard'
 //import LunahackVideo from '../../assets/lunahack-video.mp4'
 //import ValentinesVideo2 from '../../assets/valentines-video1.mp4'
-//import IeeeftarVideo from '../../assets/ieeeftar-video.mp4'
 import { Cloudinary } from '@cloudinary/url-gen/index';
 const Events = ({isHome}) => {
-    const cld = new Cloudinary({ cloud: { cloudName: "dztd3ciau" } });
+    const cld = new Cloudinary({ cloud: { cloudName: import.meta.env.VITE_API_URL } });
     const FieldsOfHope = cld.image("docs/models-28");
     const WameedPresent = cld.image("docs/models-77");
     const Therapy = cld.image("docs/models-64");
@@ -79,11 +78,11 @@ const Events = ({isHome}) => {
     const WameedTraining2 = cld.image("docs/models-89");
     const WameedTraining3 = cld.image("wameed-training3_akuk83");
     const WameedTraining4 = cld.image("wameed-training4_txoqkn");
-    const ValentinesVideo1 = cld.image("valentines-video_ytr1yn");
-    const WiechillVideo = cld.image("wiechill-video_u7q7gm");
-    const EdweekVideo = cld.image("edweek-video_qicctt");
-    const BootcampWissemVideo = cld.image("bootcamp-wissem-video_g79ogr");
-
+    const ValentinesVideo1 = cld.video("valentines-video_ytr1yn");
+    const WiechillVideo = cld.video("wiechill-video_u7q7gm");
+    const EdweekVideo = cld.video("edweek-video_qicctt");
+    const BootcampWissemVideo = cld.video("bootcamp-wissem-video_g79ogr");
+    const IeeeftarVideo = cld.video("ieeeftar-video_vmpitr")
     const events = [
         {
             id: 1,
@@ -174,11 +173,11 @@ const Events = ({isHome}) => {
             type: "past",
             image: IEEEFtar,
             gallery: [
-                //     {
-                //     id: 1,
-                //     media: IeeeftarVideo,
-                //     type: "video"
-                // },
+                    {
+                    id: 1,
+                    media: IeeeftarVideo,
+                    type: "video"
+                },
             ]
         },
         {

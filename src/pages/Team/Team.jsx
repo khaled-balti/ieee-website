@@ -5,7 +5,7 @@ import DarkBg from '../../assets/dark-bg.jpg'
 import ProfileCard from '../../layout/ProfileCard/ProfileCard';
 import { Cloudinary } from '@cloudinary/url-gen/index';
 const Team = ({isHome}) => {
-    const cld = new Cloudinary({ cloud: { cloudName: "dztd3ciau" } });
+    const cld = new Cloudinary({ cloud: { cloudName: import.meta.env.VITE_API_URL } });
     const SalahKaroui = cld.image("docs/models");
     const Nidhal = cld.image("nidhal_sskj3h");
     const Iyed = cld.image("docs/models-51");

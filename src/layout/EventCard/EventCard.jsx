@@ -18,7 +18,7 @@ const EventCard = ({event}) => {
                 {event?.gallery.map((media) => (
                     <div key={media?.id} className="rounded-xl overflow-hidden">
                     {media?.type === "image" ? (
-                        <a href={media?.media} target="_blank" rel="noopener noreferrer">
+                        <a href={media?.media?.toURL()} target="_blank" rel="noopener noreferrer">
                         <AdvancedImage
                             cldImg={media?.media}
                             className={`rounded-xl w-full object-cover ${

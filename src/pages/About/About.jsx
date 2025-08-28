@@ -12,7 +12,7 @@ import { GrResources } from "react-icons/gr";
 import { Cloudinary } from '@cloudinary/url-gen/index';
 import { AdvancedImage } from '@cloudinary/react';
 const About = ({isHome}) => {
-    const cld = new Cloudinary({ cloud: { cloudName: "dztd3ciau" } });
+    const cld = new Cloudinary({ cloud: { cloudName: import.meta.env.VITE_API_URL } });
     const img = cld.image("docs/models-48");
   return (
     <div>

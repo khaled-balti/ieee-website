@@ -15,7 +15,7 @@ const Navbar = () => {
      ${isActive ? "text-white bg-[#8359FC] rounded-2xl" : "text-[#8359FC]"}
      text-center w-full lg:text-left lg:w-auto`;
 
-     const cld = new Cloudinary({ cloud: { cloudName: "dztd3ciau" } });
+     const cld = new Cloudinary({ cloud: { cloudName: import.meta.env.VITE_API_URL } });
      const Logo = cld.image("docs/models-53");
   return (
     <div className="sticky top-4 z-50 h-24 mx-4 lg:mx-10 xl:mx-56 py-6 bg-white rounded-[50px] mt-10 px-6 flex justify-between items-center">
