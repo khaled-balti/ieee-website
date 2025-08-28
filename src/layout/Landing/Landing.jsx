@@ -4,7 +4,7 @@ import ImageCarousel from '../Carousel/Carousel'
 
 const Landing = () => {
   return (
-    <div className="relative w-full lg:h-[100vh] pt-0 lg:pt-32 -mt-[130px] flex justify-center items-center">
+    <div className="relative w-full lg:h-[100vh] pt-0 lg:pt-32 -mt-[140px] flex justify-center items-center">
       <img src={Bgimage} className="absolute inset-0 w-full h-full object-cover -z-10" alt="Background" />
       <div className="absolute inset-0 bg-opacity-40"></div>
       <div className="relative z-10 container mx-auto px-8 py-20">

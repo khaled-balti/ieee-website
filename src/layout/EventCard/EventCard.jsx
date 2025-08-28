@@ -19,7 +19,7 @@ const EventCard = ({event}) => {
     <div className="relative rounded-xl overflow-hidden border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] flex">
         <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
             <h1 className="text-white font-semibold text-3xl md:text-4xl text-center">{event?.title}</h1>
-            <p className="text-white text-xl mt-10 text-center">{event?.description}</p>
+            <p className="text-white text-lg md:text-xl mt-10 text-center">{event?.description}</p>
 
             {event?.gallery.length > 0 && (
                 <div className="px-4 md:px-10 mt-10 flex flex-col gap-10">
@@ -39,12 +39,16 @@ const EventCard = ({event}) => {
                         </a>
                     ) : (
                         <div className="rounded-xl overflow-hidden border-2 border-white">
-                        <AdvancedVideo
-                            cldVid={media?.media}
-                            controls
-                            className="rounded-xl w-full h-auto md:h-[400px] lg:h-[600px] max-h-[80vh] object-cover"
-                        />
+                            <AdvancedVideo
+                                cldVid={media?.media}
+                                controls
+                                controlsList="nodownload"
+                                playsInline
+                                className="rounded-xl w-full h-[200px] md:h-[400px] lg:h-[600px] object-cover"
+                                style={{ outline: "none" }}
+                            />
                         </div>
+
                     )}
 
                     {media?.description && <p className="text-white text-xl mt-4">{media?.description}</p>}

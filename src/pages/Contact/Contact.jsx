@@ -6,7 +6,7 @@ import { FaLocationDot } from 'react-icons/fa6'
 const Contact = ({isHome}) => {
   return (
         <div>
-            <div className={`relative w-full ${isHome ?  'py-20' : 'py-22'} ${isHome ? '' : 'pt-32'} ${isHome ? '' : '-mt-[130px]'} flex justify-center items-center`}>
+            <div className={`relative w-full ${isHome ?  'py-20' : 'py-22'} ${isHome ? '' : 'pt-32'} ${isHome ? '' : '-mt-[140px]'} flex justify-center items-center`}>
                                     <img src={HeaderImage} className="absolute inset-0 w-full h-full object-cover -z-10" alt="Background" />
                                     <div className="absolute inset-0 bg-opacity-40"></div>
                                     <div className='py-8'>

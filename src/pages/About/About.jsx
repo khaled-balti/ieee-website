@@ -16,7 +16,7 @@ const About = ({isHome}) => {
     const img = cld.image("docs/models-48");
   return (
     <div>
-        <div className={`relative w-full ${isHome ?  'py-16' : 'py-22'} ${isHome ? '' : 'pt-32'} ${isHome ? '' : '-mt-[130px]'} flex justify-center items-center`}>
+        <div className={`relative w-full ${isHome ?  'py-16' : 'py-22'} ${isHome ? '' : 'pt-32'} ${isHome ? '' : '-mt-[140px]'} flex justify-center items-center`}>
             <img src={HeaderImage} className="absolute inset-0 w-full h-full object-cover -z-10" alt="Background" />
             <div className="absolute inset-0 bg-opacity-40"></div>
             <div className='py-8'>
