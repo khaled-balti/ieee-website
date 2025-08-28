@@ -60,7 +60,7 @@ const About = ({isHome}) => {
                             <FiTarget className='text-2xl md:text-4xl text-white' />
                         </div>
                         <p className='pl-8 text-center text-white font-semibold text-3xl md:text-4xl relative -top-14'>Our Vision</p>
-                        <p className='text-center text-white text-xl relative -top-4'>IEEE ISSATM WIE AG is committed to bridging the gender gap in STEM through cutting-edge projects, astronaut-focused AI innovations, and hands-on learning opportunities that inspire the next generation of space pioneers.</p>
+                        <p className='text-center text-white text-xl relative -top-4'>To empower women in engineerin and technology by fostering a global community that drives innovation, supports astronautics-inspired solutions, and advances AI for space exploration.</p>
                     </div>
 
                     <div className='relative h-1/2 rounded-xl overflow-hidden border-2 border-[#4A35A1] shadow-[0_8px_40px_#4A35A1] py-8 px-12 flex flex-col justify-between'>
